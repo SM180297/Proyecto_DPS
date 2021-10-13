@@ -1,6 +1,9 @@
 
 export default {
 
-    PRIMARY_COLOR: '#000000',
-    BG_COLOR: '#8e8e8e'
+    AUX_COLOR:      '#92C7DD',
+    BG_COLOR:       '#2B303A',
+    TEST_COLOR:     '#fb8b24',
+    ENPH_COLOR:     '#FEEAFA',
+    DETAILS_COLOR:  '#A5E6BA'
 }
