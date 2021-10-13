@@ -1,6 +1,8 @@
 import React,{useState} from 'react';
-import {View,Button} from 'react-native';
+import {View,Text} from 'react-native';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 import DateTimePickerModal from "react-native-modal-datetime-picker";
+import colores from '../utils/colores';
 
 export default function Calendario(props)
 {
@@ -15,13 +17,15 @@ export default function Calendario(props)
     };
   
     const handleConfirm = (date) => {
-      console.warn("A date has been picked: ", date);
+      console.warn("A date has been picked: ", date); // handle method
       hideDatePicker();
     };
   
     return (
       <View>
-        <Button title="Seleccione Fecha..." onPress={showDatePicker} />
+        <TouchableOpacity onPress={showDatePicker} >
+          <Text style={{color:colores.AUX_COLOR}}>Seleccione la fecha</Text>
+        </TouchableOpacity>
         <DateTimePickerModal
           isVisible={isDatePickerVisible}
           mode="date"
