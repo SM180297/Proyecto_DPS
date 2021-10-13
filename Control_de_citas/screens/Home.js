@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button,View,StyleSheet,Text } from 'react-native';
+import { View,StyleSheet,Text } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import colores from '../utils/colores';
 
@@ -9,13 +9,13 @@ function Home({ navigation }) {
     
     return (
       <View style={styles.contenedor}>
-        <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate('Citas')}>
+        <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate('RegistroCita')}>
           <View><Text style={styles.etiquetaBtn}>Crear citas</Text></View>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate('Citas')}>
+        <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate('Cita')}>
           <View><Text style={styles.etiquetaBtn}>Ver citas</Text></View>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate('Citas')}>
+        <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate('Medico')}>
           <View><Text style={styles.etiquetaBtn}>Información de especialistas</Text></View>
         </TouchableOpacity>
       </View>
