@@ -3,7 +3,8 @@ import { View,StyleSheet,Text} from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import Calendario from './../componentes/Calendario';
 import colores from '../utils/colores';
-
+import Selector from './../componentes/Picker';
+import Reloj from '../componentes/Reloj';
 
 function RegistroCitas({ navigation }) {
 
@@ -11,9 +12,12 @@ function RegistroCitas({ navigation }) {
  
   return (
       <View style={styles.contenedor}>
-
-
+            <Text>Especialidad</Text>
+            <Selector/>
+           <Text>Medico</Text>
+            <Selector/>
             <Calendario />
+            <Reloj/>
           <TouchableOpacity style={styles.btn}>
               <View><Text style={styles.etiquetaBtn}>Agregar</Text></View>
           </TouchableOpacity>
