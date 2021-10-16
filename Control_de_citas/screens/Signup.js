@@ -133,7 +133,7 @@ const Signup = ({ navigation }) => {
           )}
         <StatusBar style="dark" />
         <InnerContainer>
-          <PageTitle>Ecommerce</PageTitle>
+          <PageTitle>CONSULTAS</PageTitle>
           <SubTitle>Registro de Cuenta</SubTitle>
 
 

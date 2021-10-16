@@ -133,7 +133,7 @@ const Login = ({ navigation }) => {
         <StatusBar style="dark" />
         <InnerContainer>
           <PageLogo resizeMode="cover" source={require('./../assets/img/login3.png')} />
-          <PageTitle>Ecommerce</PageTitle>
+          <PageTitle>CONSULTAS</PageTitle>
           <SubTitle>Inicio de Sesión</SubTitle>
 
           <Formik
