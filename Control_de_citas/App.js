@@ -1,18 +1,33 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import Login from './Login'; 
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState } from 'react';
+import RootStack from './navigators/RootStack';
+import AppLoading from 'expo-app-loading';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { CredentialsContext } from './components/CredentialsContext';
 
 export default function App() {
+  const [appReady, setAppReady] = useState(false);
+  const [storedCredentials, setStoredCredentials] = useState("");
+
+  const checkLoginCredentials = () => {
+    AsyncStorage.getItem('flowerCribCredentials')
+      .then((result) => {
+        if (result !== null) {
+          setStoredCredentials(JSON.parse(result));
+        } else {
+          setStoredCredentials(null);
+        }
+      })
+      .catch((error) => console.log(error));
+  };
+
+  if (!appReady) {
+    return <AppLoading startAsync={checkLoginCredentials} 
+    onFinish={() => setAppReady(true)} onError={console.warn} />;
+  }
+
   return (
-    <>
-    <Login></Login>
-  </>
+    <CredentialsContext.Provider value={{ storedCredentials, setStoredCredentials }}>
+      <RootStack />
+    </CredentialsContext.Provider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-  
-  },
-});
