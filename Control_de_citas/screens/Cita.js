@@ -2,7 +2,7 @@ import React from 'react';
 import { Button,View,StyleSheet } from 'react-native';
 import colores from '../utils/colores';
 
- function Citas({ navigation }) {
+ function Cita({ navigation }) {
      
     return (
       <View style={styles.contenedor}>
@@ -21,5 +21,5 @@ import colores from '../utils/colores';
 
   });
 
-  export default Citas;
+  export default Cita;
   

@@ -42,7 +42,7 @@ function NavigationComponent()
             <Drawer.Screen name="RegistroCita"
                            component={RegistroCita} 
                            options={{ title: "Nueva Cita"}}/>
-            <Drawer.Screen name="Citas" component={Cita} />
+            <Drawer.Screen name="Cita" component={Cita} />
             <Drawer.Screen name="Medico" component={Medico} 
                         options={{title: 'Médicos' }} />
       </Drawer.Navigator>    
