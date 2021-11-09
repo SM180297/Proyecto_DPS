@@ -7,7 +7,8 @@ export default class login extends Component{
         return(
             <View>
                 <View>
-                    <Text>Registro de Cliente</Text>
+                    <Text>Iniciar Sesión</Text>
+                    
                 </View>
             </View>
         );
