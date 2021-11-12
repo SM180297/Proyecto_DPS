@@ -3,7 +3,7 @@ import {StyleSheet,View, Text} from 'react-native'
 import {Picker} from '@react-native-picker/picker';
 import colores from '../utils/colores';
 
- function Selector(){  
+ function Selector({etiqueta}){  
     const [country, setCountry] = useState('Unknown');
 
   return (
@@ -14,7 +14,8 @@ import colores from '../utils/colores';
         mode="dialog" // Android only
         style={styles.picker}
       >
-        <Picker.Item label="Please select your country" value="Unknown" />
+        <Picker.Item label={etiqueta} value="Unknown" />
+        {/* sustiuir por una flatlist */}
         <Picker.Item label="Australia" value="Australia" />
         <Picker.Item label="Belgium" value="Belgium" />
         <Picker.Item label="Canada" value="Canada" />

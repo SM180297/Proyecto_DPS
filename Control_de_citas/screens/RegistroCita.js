@@ -12,12 +12,18 @@ function RegistroCitas({ navigation }) {
  
   return (
       <View style={styles.contenedor}>
-            <Text>Especialidad</Text>
-            <Selector/>
-           <Text>Medico</Text>
-            <Selector/>
-            <Calendario />
-            <Reloj/>
+            <Text style={styles.texto}>Especialidad</Text>
+            <Selector etiqueta='Seleccina una especialidad'/>
+            
+            <Text style={styles.texto}>Medico</Text>
+            <Selector etiqueta='Seleecciona un médico'/>
+            
+            <Text style={styles.texto}>Seleccione la fecha</Text>
+            <Calendario style={styles.elementos} />
+            
+            <Text style={styles.texto}>Seleccione la hora</Text>
+            <Reloj style={styles.elementos} />
+          
           <TouchableOpacity style={styles.btn}>
               <View><Text style={styles.etiquetaBtn}>Agregar</Text></View>
           </TouchableOpacity>
@@ -44,6 +50,15 @@ function RegistroCitas({ navigation }) {
     etiquetaBtn:{
       color: colores.AUX_COLOR,
       fontSize:20
+    },
+    texto:
+    {
+      fontSize:24,
+      color:colores.AUX_COLOR
+    },
+    elementos:
+    {
+        marginVertical:30
     }
   });
 
